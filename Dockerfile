@@ -2,7 +2,7 @@
 FROM python:3
 
 ## Copy from root folder to artemis folder inside docker image
-COPY . /artemis
+COPY . /app
 
 ## Expose 5000 port
 EXPOSE 5000
@@ -11,7 +11,7 @@ EXPOSE 5000
 RUN pip install Flask
 
 ## Change dir
-WORKDIR /artemis
+WORKDIR /app
 
 ## Run the application
-CMD python artemis.py
+CMD python app.py
